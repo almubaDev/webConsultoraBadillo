@@ -4,38 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./logosConsultoraBadillo/ELEMENTO-GRAFICO-COLOR.ico">
+    <link rel="shortcut icon" href="./Assent/logosConsultoraBadillo/ELEMENTO-GRAFICO-COLOR.ico">
     <link rel="stylesheet" type="" href="./css/styke.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Consultora Badillo</title>
-    <script src="https://kit.fontawesome.com/7f9eeb84fb.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/7f9eeb84fb.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="header__nav">
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./asesoriaTributariaOnline.html">Asesoría Tributaria</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="./asesoriaTributariaOnline.html">Asesoría Tributaria en línea</a></li>
+                <li><a href="">Contacto</a></li>
             </ul>
         </nav>
-       <div class="presentation-container"></div>
-        <img src="./logosConsultoraBadillo/ELEMENTO GRAFICO - COLOR.png" alt="logo empresa">
-        <h1>Consultora Badillo</h1>
-        <h3>descripcion de los que solucionamos como empresa</h3>
+        <div class="header-info">
+            <div class="presentation">
+                <div class="presentation__company">
+                    <img src="./Assent/logosConsultoraBadillo/ELEMENTO GRAFICO - COLOR.png" alt="logo empresa">
+                    <h1>Consultora Badillo</h1>
+                </div>
+                <h3>descripcion de los que solucionamos como empresa</h3>
+            </div> 
+            <div class="header-right">
+                <p>Servicios</p>
+                <div></div>
+                <p>Contabilidad - Gestiión Tributaria - Asesoría PYME</p>
+                <a href="#cas">Ver en detalle</a>
+            </div>
+        </div>
     </header>
     <main>
-        <div class="services-container">
-            <div class="services-card">
-                <img src="" alt="">
-                <p>SERVICIOS CONTABLES</p>
+        <section class="us">
+            <div class="us__information">
+                <h2>Nosotros</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ex veritatis ipsa quae atque quia expedita eum. Corrupti magnam quasi excepturi! Quisquam aperiam delectus odio eos amet sequi expedita quaerat!</p>
             </div>
-            <div class="services-card">
+            <div class="divisor"></div>
+            <div class="us__img">
                 <img src="" alt="">
-                <p>GESTIÓN TRIBUTARIA</p>
             </div>
-            <div class="services-card">
-                <img src="" alt="">
-                <p>ASESORÍA A PYME</p>               
-            </div>    
+
+        </section>
+        <section class="service" id="cas">
+            <div class="services-container">
+                <div class="services-card">
+                    <img src="" alt="">
+                    <p>SERVICIOS CONTABLES</p>
+                </div>
+                <div class="services-card">
+                    <img src="" alt="">
+                    <p>GESTIÓN TRIBUTARIA</p>
+                </div>
+                <div class="services-card">
+                    <img src="" alt="">
+                    <p>ASESORÍA A PYME</p>               
+                </div> 
+            </div>   
+        </section>
+
     </main>
     <footer>
         <p>Contacto</p>

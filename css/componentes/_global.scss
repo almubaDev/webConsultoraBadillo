@@ -1,5 +1,91 @@
-$color-primario: #21366e;
+$primary-color: #21366e;
+$secondary-color: #495C91;
+$text-color: #010511;
+$complementary-color: #d7c45f;
+$complementary2-color: #A6B0CB;
+$font-title: 'Lato', sans-serif;
+$font-text: 'Poppins', sans-serif;
 
+//Estilos prefeterminados
+@mixin text-definition ($font) {
+    @if $font==$font-title {
+        color: $primary-color;
+        font-family: $font-title;
+        font-size: 2.3rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+    }@else {
+        color: #010511;
+        font-family: $font-text;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5rem;  
+    }
+}
+@mixin tarjeta($bg) {
+    align-items: flex-start;
+    background: $bg;
+    box-shadow: 0.8px 0.8px 3px $primary-color;
+    display: flex;
+    flex-direction: column;
+}
+@mixin boton {
+    align-items: center;
+    background-color: opcacity-color($primary-color,1);
+    color: $complementary2-color;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    font-family: $font-text;
+    font-weight: 500;
+    justify-content: center;
+    height: 12px;
+    padding: 12px 15px;
+    width: 150px;
+    
+}
+@mixin divLine ($h, $w, $bgc){
+    background-color: $bgc;
+    height: $h;
+    width: $w;
+}
+@function opcacity-color($color, $opacity) {
+    @return rgba($color, $opacity);
+}
+
+
+//Efectos
+@mixin navBar-effect {
+    &::before {
+        content:'';
+        background: $complementary-color;
+        position:absolute;
+        bottom:-10px; 
+        width: 0px;
+        height: 0px;
+        transition:  0.5s ease-in-out;
+    }
+    &:hover::before{
+        width: 100%;
+        height: 4px;
+    }
+}
+@mixin background-blur($url, $pxBlur) {
+    &:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: url($url);
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur($pxBlur) ;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+
+//Responsive design
 @mixin smartphone {
     @media (max-width: 479px) {
         @content;
@@ -15,16 +101,17 @@ $color-primario: #21366e;
         @content;
     }
 }
-@mixin tarjeta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
+//html
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f5f5f5;
+}

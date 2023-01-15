@@ -1,0 +1,33 @@
+.us {
+    display: flex;
+    justify-content: space-around;
+    height: 250px;
+    width: 100%;
+    
+
+    .us__information {
+        height: 100%;
+        padding: 12px 25px;
+        width: 45%;
+        h2 {
+            margin-bottom: 42px;
+            
+            @include text-definition($font-title);
+        }
+        p {
+            @include text-definition($font-text)
+        }
+    }
+    .divisor{
+        @include divLine(100%,1px,$complementary-color)
+    }
+    .us__img {
+        height: 100%;
+        width: 45%;
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

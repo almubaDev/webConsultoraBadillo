@@ -2,4 +2,188 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+header {
+  background-image: url(../../Assent/imagenes/fotor_2023-1-14_21_51_44.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 80px;
+  margin-bottom: 25px;
+  height: 330px;
+  width: 100%;
+}
+header .header__nav {
+  display: flex;
+  background-color: rgba(166, 176, 203, 0.3);
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  padding: 10px 42px;
+}
+header .header__nav ul {
+  display: flex;
+  list-style: none;
+}
+header .header__nav a {
+  margin-left: 20px;
+  position: relative;
+  text-decoration: none;
+  color: #010511;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+header .header__nav a::before {
+  content: "";
+  background: #d7c45f;
+  position: absolute;
+  bottom: -10px;
+  width: 0px;
+  height: 0px;
+  transition: 0.5s ease-in-out;
+}
+header .header__nav a:hover::before {
+  width: 100%;
+  height: 4px;
+}
+header .header__nav a:hover {
+  color: #d7c45f;
+}
+@media (max-width: 479px) {
+  header .header__nav {
+    display: none;
+  }
+}
+header .header-info {
+  display: flex;
+  justify-content: space-around;
+}
+header .header-info .presentation {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+header .header-info .presentation .presentation__company {
+  display: flex;
+  align-items: center;
+}
+header .header-info .presentation .presentation__company img {
+  height: 80px;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  width: 80px;
+}
+header .header-info .presentation .presentation__company h1 {
+  text-align: center;
+  color: #21366e;
+  font-family: "Lato", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  color: #A6B0CB;
+}
+header .header-info .presentation h3 {
+  color: #010511;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  color: #495C91;
+}
+header .header-info .header-right {
+  border-radius: 0 0 80px 0;
+  padding: 30px 20px;
+  width: 450px;
+  align-items: flex-start;
+  background: rgba(33, 54, 110, 0.2);
+  box-shadow: 0.8px 0.8px 3px #21366e;
+  display: flex;
+  flex-direction: column;
+  color: #010511;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+header .header-info .header-right div {
+  margin: 8px 0;
+  background-color: #21366e;
+  height: 2px;
+  width: 100%;
+}
+header .header-info .header-right a {
+  align-items: center;
+  background-color: #21366e;
+  color: #A6B0CB;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  justify-content: center;
+  height: 12px;
+  padding: 12px 15px;
+  width: 150px;
+  align-self: center;
+  font-weight: 300;
+  margin-top: 12px;
+  position: relative;
+  text-decoration: none;
+}
+header .header-info .header-right a:hover {
+  color: #495C91;
+  background-color: #d7c45f;
+}
+
+.us {
+  display: flex;
+  justify-content: space-around;
+  height: 250px;
+  width: 100%;
+}
+.us .us__information {
+  height: 100%;
+  padding: 12px 25px;
+  width: 45%;
+}
+.us .us__information h2 {
+  margin-bottom: 42px;
+  color: #21366e;
+  font-family: "Lato", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+}
+.us .us__information p {
+  color: #010511;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+.us .divisor {
+  background-color: #d7c45f;
+  height: 100%;
+  width: 1px;
+}
+.us .us__img {
+  height: 100%;
+  width: 45%;
+}
+.us .us__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=styke.css.map */
