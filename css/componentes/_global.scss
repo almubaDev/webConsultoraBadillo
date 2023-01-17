@@ -1,7 +1,7 @@
 $primary-color: #21366e;
 $secondary-color: #495C91;
 $text-color: #010511;
-$complementary-color: #d7c45f;
+$complementary-color: #FFEECC;
 $complementary2-color: #A6B0CB;
 $font-title: 'Lato', sans-serif;
 $font-text: 'Poppins', sans-serif;
@@ -28,6 +28,7 @@ $font-text: 'Poppins', sans-serif;
     box-shadow: 0.8px 0.8px 3px $primary-color;
     display: flex;
     flex-direction: column;
+    padding: 18px;
 }
 @mixin boton {
     align-items: center;
@@ -92,12 +93,12 @@ $font-text: 'Poppins', sans-serif;
     }
 }
 @mixin tablet {
-    @media (min-width: 480px) and (max-width: 767px){
+    @media (min-width: 480px) and (max-width: 905px){
         @content;
     }
 }
 @mixin desktop {
-    @media (min-width: 768px) and (max-width: 1200px) {
+    @media (min-width: 906px) and (max-width: 1920px) {
         @content;
     }
 }
