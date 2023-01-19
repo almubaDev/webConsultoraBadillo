@@ -25,7 +25,7 @@ $font-text: 'Poppins', sans-serif;
 @mixin tarjeta($bg) {
     align-items: flex-start;
     background: $bg;
-    box-shadow: 0.8px 0.8px 3px $primary-color;
+    box-shadow: 0.5px 0.5px 5px  #333;
     display: flex;
     flex-direction: column;
     padding: 18px;
@@ -55,7 +55,7 @@ $font-text: 'Poppins', sans-serif;
 }
 
 
-//Efectos
+//Efectos y animaciones
 @mixin navBar-effect {
     &::before {
         content:'';
@@ -71,19 +71,30 @@ $font-text: 'Poppins', sans-serif;
         height: 4px;
     }
 }
-@mixin background-blur($url, $pxBlur) {
-    &:before {
-        content: "";
-        height: 100%;
-        width: 100%;
-        background-image: url($url);
-        background-size: cover;
-        background-repeat: no-repeat;
-        filter: blur($pxBlur) ;
-        position: absolute;
-        z-index: -1;
-    }
+@keyframes scale {
+    50% {transform:scale(1.5)};
 }
+@keyframes girar {
+    50%{transform: rotate(50deg)};
+}
+@keyframes traslateUpDown {
+    45%{transform: translate(0, -5px);}
+    55%{transform: translate(0, 5px);}
+}
+
+// @mixin background-blur($url, $pxBlur) {
+//     &:before {
+//         content: "";
+//         height: 100%;
+//         width: 100%;
+//         background-image: url($url);
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         filter: blur($pxBlur) ;
+//         position: absolute;
+//         z-index: -1;
+//     }
+// }
 
 
 //Responsive design
@@ -102,7 +113,6 @@ $font-text: 'Poppins', sans-serif;
         @content;
     }
 }
-
 
 //html
 * {

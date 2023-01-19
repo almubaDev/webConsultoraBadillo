@@ -1,6 +1,7 @@
 .us {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     padding: 0 24px;
     width: 100%;
@@ -63,6 +64,7 @@
                     }
                 }
                 .imgBox {
+                    box-shadow: 0.5px 0.5px 5px #333;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -102,10 +104,11 @@
             margin: 35px 0 50px 0;
             position: relative;
             width: 280px;
-            @include tarjeta( opcacity-color($primary-color, 0.4));
-            box-shadow: 1px 1px 5px $primary-color;
+            @include tarjeta( opcacity-color(#fff, 1));
+            box-shadow: 0.5px 0.5px 5px #333;
             .i-container {
-                background-color:$secondary-color ;
+                background-color:$complementary2-color ;
+                border: 3px $secondary-color solid;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -117,11 +120,24 @@
                 left: -15px;
                 i { 
                     color: $complementary-color;
+              
+                
+                }
+                .fa-calculator {
+                    animation: scale 6s infinite;
+                }
+                .fa-gavel {
+                    transform: rotate(-45deg);
+                    animation: girar 6s  infinite ease-in-out;
+                    
+                }
+                .fa-handshake {
+                    animation:traslateUpDown 6s  infinite ease-in-out;
                 }
             }
             h3 {
                 @include text-definition($font-title);
-                color: $complementary-color;
+                color: $secondary-color;
                 font-size:1.2rem;
                 line-height: 1rem;
                 margin: 0 auto;
@@ -133,7 +149,7 @@
                     // text-align: justify;
                     margin-top: 18px;
                     @include text-definition($font-text);
-                    color: $complementary-color;
+                    color: $text-color;
                     font-size: 0.8rem;
                 }
             }
@@ -143,12 +159,12 @@
 }
 
 .contact {
-
-    margin-top: 50px;
+    margin: 50px 0 50px 0;
+    // position: relative;
     h3 {
         @include text-definition($font-title);
-        text-align: center; 
-        margin-bottom: 34px;
+        display: block;
+        text-align: center;    
     }
     form {
         display: flex;
@@ -168,15 +184,16 @@
             font-size: 0.8;
             font-weight: 300;
             margin-bottom: 18px;
+            padding: 4px 18px;
             &::placeholder {
                 color: $complementary2-color;
                 font-size: 0.7rem;
-                padding: 22px;
+                // padding: 22px;
             }
             &:focus{
-                background-color: opcacity-color($complementary-color, 0.5);
+                background-color: opcacity-color($primary-color, 1);
+                color: $complementary-color;
                 outline: none;
-                margin-left: 12px;  
             }
         }
         textarea {
@@ -185,16 +202,17 @@
             font-size: 0.8;
             font-weight: 300;
             margin-bottom: 8px;
+            padding: 14px 18px;
             &::placeholder {
                 font-family: $font-text;
                 color: $complementary2-color;
                 font-size: 0.7rem;
-                padding: 22px;
+                // padding: 22px;
             }
             &:focus{
-                background-color: opcacity-color($complementary-color, 0.5);
+                background-color: opcacity-color($primary-color, 1);
+                color: $complementary-color;
                 outline: none;
-                margin-left: 12px;  
             }
         }
         p {
@@ -203,16 +221,66 @@
             margin-bottom: 18px;
         }
         .submit {
-            cursor: pointer;
             background-color: opcacity-color($primary-color,0.2);
+            border: none;
             border-bottom-right-radius: 40px;
-            padding: 12px 12px 12px 4px;
-            
+            box-shadow: 1px 1px 2px;
+            cursor: pointer;
+            // padding: 12px 12px 12px 4px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
             width: 100px;
-
-            &:focus{
-                margin-left: 0;
+            &::before{
+                color: $primary-color;
+                content:'Enviar';
+                font-family: $font-text;
+                left: 25%;
+                position: absolute;
+                top: 20%;
+                transition: all .5s ease-in-out;
             }
+            &:hover::before {
+                transform: translate(0,-110%);
+            }
+            &::after {
+                font-family: "FontAwesome";
+                // font: var(--fa-font-solid);
+                content: "\f1d8";
+                font-size: 1rem;
+                color: $primary-color;
+                position: absolute;
+                left: 35%;
+                bottom: -75%;
+                transition: all .5s ease-in-out;
+                
+            }
+            &:hover::after{
+                transform: translate(0,-180%);  
+            }
+    
         }
+    }
+    a {
+        background-color: #fff;
+        border-radius: 50%;
+        color: #00bb2d;
+        font-size: 2rem;
+        display: inline-block;
+        height: 50px;
+        position: sticky;
+        left: 80%;
+        text-decoration: none;
+        // text-align: center;
+        padding: 7px 12px;
+        top: 350px;
+        width: 50px;
+        z-index: 20;
+        &:hover {
+            background-color: #00bb2d;
+            color: #fff;
+            transition: all .5s ease-in-out;
+        }
+        
     }
 }
