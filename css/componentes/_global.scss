@@ -5,6 +5,12 @@ $complementary-color: #FFEECC;
 $complementary2-color: #A6B0CB;
 $font-title: 'Lato', sans-serif;
 $font-text: 'Poppins', sans-serif;
+//Medidas query
+$mobile: 640px;
+$tablet: 995px;
+$laptop: 1280px;
+$desktop: 1605px;
+
 
 //Estilos prefeterminados
 @mixin text-definition ($font) {
@@ -98,21 +104,13 @@ $font-text: 'Poppins', sans-serif;
 
 
 //Responsive design
-@mixin smartphone {
-    @media (max-width: 479px) {
+
+@mixin mqry ($medida) {
+    @media screen and (max-width: $medida) {
         @content;
     }
 }
-@mixin tablet {
-    @media (min-width: 480px) and (max-width: 905px){
-        @content;
-    }
-}
-@mixin desktop {
-    @media (min-width: 906px) and (max-width: 1920px) {
-        @content;
-    }
-}
+
 
 //html
 * {

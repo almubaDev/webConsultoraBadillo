@@ -1,7 +1,5 @@
 header {
-
-    //@include background-blur('https://media.istockphoto.com/id/1413763041/es/foto/mujer-de-negocios-sonriente-mirando-hacia-arriba-mientras-trabaja.jpg?s=1024x1024&w=is&k=20&c=_YLgOO7rbtYBdYp6JWt5NJKnNt7OE1qBT25_0NdxyDo=', 6px);
-    // background-image: url('https://media.istockphoto.com/id/1413763041/es/foto/mujer-de-negocios-sonriente-mirando-hacia-arriba-mientras-trabaja.jpg?s=1024x1024&w=is&k=20&c=_YLgOO7rbtYBdYp6JWt5NJKnNt7OE1qBT25_0NdxyDo=');
+        // background-image: url('https://media.istockphoto.com/id/1413763041/es/foto/mujer-de-negocios-sonriente-mirando-hacia-arriba-mientras-trabaja.jpg?s=1024x1024&w=is&k=20&c=_YLgOO7rbtYBdYp6JWt5NJKnNt7OE1qBT25_0NdxyDo=');
     background-image: url(../../Assent/imagenes/fotor_2023-1-14_21_51_44.png);
     background-size: cover;
     background-repeat:no-repeat;
@@ -34,9 +32,6 @@ header {
                 color: $complementary-color 
             }
         }
-        @include smartphone {
-                display: none;
-         }
     }
     .header-info {
         display: flex;
