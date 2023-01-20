@@ -1,3 +1,4 @@
+
 header {
         // background-image: url('https://media.istockphoto.com/id/1413763041/es/foto/mujer-de-negocios-sonriente-mirando-hacia-arriba-mientras-trabaja.jpg?s=1024x1024&w=is&k=20&c=_YLgOO7rbtYBdYp6JWt5NJKnNt7OE1qBT25_0NdxyDo=');
     background-image: url(../../Assent/imagenes/fotor_2023-1-14_21_51_44.png);
@@ -10,6 +11,57 @@ header {
     margin-bottom: 45px;
     height: 330px;
     width: 100%;
+
+    .burgerMenu {
+        display: none;
+        @include mqry($mobile) {
+            display: block;
+            height: 20px;
+            width: 20px;
+            position: relative;
+            left: 16px;
+            top: 12px;
+            i {
+                color: $secondary-color;
+                font-size: 1.8rem;  
+            }
+            
+        }
+    }
+    .mobile__nav {
+        background-color: opcacity-color($complementary2-color, 0.9);
+        border-radius: 0 12px 12px 12px;
+        display: block;
+        padding: 8px;
+        width: 90%;
+        position: absolute;
+        left: 16px;
+        top:45px;
+        ul {
+            flex-direction: column;
+        }
+        li {
+            list-style: none;
+            display: block;
+            &:hover {
+                background-color: $complementary-color 
+            }
+        }
+        a {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            @include text-definition($font-text);
+            font-size: 1rem;
+            text-align: center;
+            width: 100%;
+
+        }
+        
+    }
+    .inactive {
+        display: none;
+      }
     .header__nav {
         display: flex;
         background-color: opcacity-color($complementary2-color, 0.3);
@@ -17,6 +69,9 @@ header {
         margin-bottom: 50px;
         padding: 10px 42px;
         width: 100%;
+        @include mqry($mobile) {
+            display: none;
+        }
         ul {
             display: flex;
             list-style: none;
@@ -33,18 +88,26 @@ header {
             }
         }
     }
+
     .header-info {
         display: flex;
         justify-content: space-around;
+        @include mqry($mobile) {
+            flex-direction: column;
+        }
         .presentation {
             align-items: flex-start;
             display: flex;
             flex-direction: column;
             justify-content:flex-start;
-            
             .presentation__company {
                 display: flex;
                 align-items: center;
+                @include mqry($mobile) {
+                    flex-direction: column;
+                    align-content: center;
+                    width: 100%;
+                }
                 img {
                     height: 80px;
                     margin-bottom: 12px;
@@ -55,11 +118,18 @@ header {
                     text-align: center;
                     @include text-definition($font-title);
                     color: $complementary2-color;
+                    @include mqry($mobile) {
+                        font-size: 1.5rem;
+                    }
                 }
             }
             h3 {
                 @include text-definition($font-text);
                 color: $secondary-color;
+                @include mqry($mobile) {
+                    font-size: 0.8rem;
+                    display:none;
+                }
             }
         }
         .header-right {
@@ -68,10 +138,33 @@ header {
             width: 450px;
             @include tarjeta(opcacity-color($primary-color, 0.2));
             @include text-definition($font-text);
+            @include mqry($mobile) {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                margin-top: 22px;
+                padding: 20px 10px;
+                width: 300px;
+               
+            }
+            .service-title {
+                @include mqry($mobile) {
+                    display: none;
+                }
+            }
 
             div {
                 margin: 8px 0;
                 @include divLine(2px, 100%, $primary-color);
+                @include mqry($mobile) {
+                    display: none;
+                }
+            }
+            .service-type {
+                @include mqry($mobile) {
+                    font-size: 0.7rem;
+                    // text-align: center
+                }
             }
             a {
                 @include boton;
@@ -93,4 +186,3 @@ header {
 }   
 
 
-   

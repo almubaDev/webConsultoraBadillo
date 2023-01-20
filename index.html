@@ -14,11 +14,24 @@
 </head>
 <body>
     <header>
+        <div class="burgerMenu">
+            <i class="fa-sharp fa-solid fa-bars "></i>
+            <!-- <img src="./Assent/imagenes/ham2.png" alt=""> -->
+        </div>
+        
+        <nav class="mobile__nav inactive">
+            <ul>
+                <li><a href="./index.html" class="selected">Home</a></li>
+                <li><a href="#us" class="selected">Nosotros</a></li>
+                <li><a href="#service" class="selected">Servicios</a></li>
+                <li><a href="#contact" class="selected">Contacto</a></li>
+            </ul>
+        </nav>
         <nav class="header__nav">
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#us">Nosotros</a></li>
-                <li><a href="./asesoriaTributariaOnline.html">Asesoría Tributaria en línea</a></li>
+                <li><a href="#service">Servicios</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
@@ -31,11 +44,12 @@
                 <h3> Facilitamos el cumplimiento de tus obligaciones tributarias.</h3>
             </div> 
             <div class="header-right">
-                <p>Servicios</p>
+                <p class="service-title">Servicios</p>
                 <div></div>
-                <p>Contabilidad - Gestión Tributaria - Asesoría PYME</p>
+                <p class="service-type">Contabilidad - Gestión Tributaria - Asesoría PYME</p>
                 <a href="#service">Ver en detalle</a>
             </div>
+
         </div>
     </header>
     <main>
@@ -43,6 +57,7 @@
             <div class="us__information">
                 <h2>Te entregamos</h2>
                 <ul>
+                    <li class="cab">Facilitamos el cumplimiento de tus obligaciones tributarias.</li>
                     <li>Atención directa y personalizada con nuestra CEO</li>
                     <li>Orientción y consejos en materia financiera y contable de forma práctica y fácil </li>
                     <li>Democratízación del entendimiento de las leyes tributarias y jurisprudencia Administrativa </li>
@@ -51,6 +66,20 @@
             <div class="divisor"></div>
             <div class="us__employees">
                 <h2>Nuestros profesionales</h2>
+                <div class="employees-mobile">
+                    <div class="employees-mobile__card">
+                        <img src="https://www.shutterstock.com/image-photo/young-female-manager-260nw-593079929.jpg" alt=""> 
+                        <h3>Tamara Muñoz <br><span> Magister en Tributaria</span></h3>
+                    </div>
+                    <div class="employees-mobile__card">
+                        <img src="https://www.shutterstock.com/image-photo/young-female-manager-260nw-593079929.jpg" alt=""> 
+                        <h3>Tamara Muñoz <br><span> Magister en Tributaria</span></h3>
+                    </div>
+                    <div class="employees-mobile__card">
+                        <img src="https://www.shutterstock.com/image-photo/young-female-manager-260nw-593079929.jpg" alt=""> 
+                        <h3>Tamara Muñoz <br><span> Magister en Tributaria</span></h3>
+                    </div>
+                </div>
                 <div class="us__box-container"> 
                     <div class="box">
                         <div class="imgBox">
@@ -156,7 +185,7 @@
     </main>
     <footer>
         <img src="./Assent/logosConsultoraBadillo/ELEMENTO GRAFICO - POSITIVO.png" alt="logo de empresa">
-        <div class="linefoot"></div>
+
         <div class="info-company">
             <div class="info-company__item">
                 <i class="fa-solid fa-location-dot"></i>
@@ -176,13 +205,15 @@
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#us">Nosotros</a></li>
-                <li><a href="./asesoriaTributariaOnline.html">Asesoría Tributaria en línea</a></li>
+                <li><a href="#service">Servicios</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </div>
     </footer>   
     <div class="by">
         <p>By almubaDev</p>
-    </div> 
+    </div>
+  <script src="./main.js"></script>  
 </body>
+
 </html>

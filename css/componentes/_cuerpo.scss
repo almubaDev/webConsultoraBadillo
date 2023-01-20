@@ -16,16 +16,32 @@
             margin-left: 30% ;
             width: 100%;
         }
+        @include mqry($mobile) {
+            margin-left: 0;
+            
+        }
         h2 {
             margin-bottom: 42px;
             @include text-definition($font-title);
+            @include mqry($laptop) {
+                margin-bottom: 22px;
+            }
         }
         ul {
             padding: 12px 15px;
             @include text-definition($font-text);
             font-size: 0.8rem;
+            // @include mqry($mobile) {
+            //     list-style: none;
+            // }
             li {
                 margin-bottom: 8px;
+            }
+            .cab {
+                display: none;
+                @include mqry($mobile) {
+                    display: list-item;
+                }
             }
         }
     }
@@ -44,11 +60,58 @@
         padding: 0 52px;
         @include mqry ($laptop) {
             width: 100%;
+        }
+        @include mqry ($mobile) {
+            padding: 0;
         }        
         h2 {
             width: 100%;
             @include text-definition($font-title);
+            @include mqry ($mobile) {
+                text-align: center;
+                margin-bottom: 18px;
+            }
         }
+
+        .employees-mobile {
+            display:none;
+            @include mqry($mobile) {
+                display: flex;
+                // flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                height: 400px;
+                width: 100%;
+                .employees-mobile__card {
+                    align-items: center;
+                    border-right: 2px solid $complementary2-color;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 8px;
+                    &:nth-child(even){
+                        border-right: none;
+                        border-left: 2px solid $complementary2-color;
+                        flex-direction: row-reverse;
+                    }
+                    img {
+                        height: 100px;
+                        width: 100px;
+                        margin: 0 8px;
+                 }
+                    h3 {
+                        @include text-definition($font-text);
+
+                        span {
+                            color: $secondary-color;
+                            font-size: 0.8rem;      
+                            margin-left: 8px;       
+                        }
+                    }
+
+                }            
+            }
+        } 
         .us__box-container {
             position: relative;
             display: flex;
@@ -56,6 +119,9 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            @include mqry ($mobile) {
+                display: none;
+            } 
             .box {
                 position: relative;
                 width: 10rem;
@@ -77,6 +143,7 @@
                             }
                         }
                     }
+
                 }
                 .imgBox {
                     box-shadow: 0.5px 0.5px 5px #333;
@@ -296,6 +363,12 @@
         top: 350px;
         width: 50px;
         z-index: 20;
+        @include mqry ($laptop) {
+            left:70%;
+        }
+        @include mqry($mobile) {
+            left: 80%;
+        }
         &:hover {
             background-color: #fff;
             color: #00bb2d;

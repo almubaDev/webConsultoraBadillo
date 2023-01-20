@@ -1,17 +1,25 @@
 footer{
     align-items: center;
+    background-color:$primary-color;
     border-top-left-radius: 80px;
     display: flex;
-    background-color:$primary-color;
-    height: 300px;
     justify-content: space-around;
     margin-top: 124px;
+    @include mqry($mobile) {
+        flex-direction: column;
+    }
     img {
         height: 100px;
         width: 100px;
+        @include mqry($mobile) {
+            margin-top: 24px
+        }
     }
     .linefoot {
-        @include divLine(60%, 1px, #fff);
+        @include divLine(180px, 1px, #fff);
+        @include mqry($mobile) {
+            @include divLine(1px, 180px, #fff);
+        }
     }
     .info-company {
         margin-top: 54px;
@@ -43,7 +51,11 @@ footer{
                 text-decoration: none;
             }
            }
-
+       }
+       @include mqry($mobile) {
+        align-self: flex-start;
+        list-style-position: inside;
+        margin-left: 38px;
        }
     }
 
@@ -56,4 +68,7 @@ footer{
     font-size: 0.6rem;
     justify-content: end;
     padding: 8px 22px;
+}
+.inactive {
+    display: none;
 }
