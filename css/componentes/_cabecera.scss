@@ -28,29 +28,40 @@ header {
         }
     }
     .mobile__nav {
-        background-color: opcacity-color($complementary2-color, 0.9);
-        border-radius: 0 12px 12px 12px;
+        background-color: opcacity-color($primary-color, 1);
+        border-radius: 0 0px 24px 0;
+        box-shadow: 2px 2px 4px $complementary2-color;
         display: block;
         padding: 8px;
         width: 90%;
         position: absolute;
         left: 16px;
         top:45px;
+        z-index: 50;
         ul {
             flex-direction: column;
         }
         li {
+            // background-color: opcacity-color($primary-color, 1);
+            // border-radius: 80px 0 80px 0;
+            border-bottom: 2px solid $complementary2-color;
             list-style: none;
-            display: block;
+            display: flex;
+            align-items: center;
+            height: 62px;
             &:hover {
                 background-color: $complementary-color 
             }
+        }
+        .endList {
+            border: none;
         }
         a {
             display: block;
             position: relative;
             text-decoration: none;
             @include text-definition($font-text);
+            color: $complementary-color;
             font-size: 1rem;
             text-align: center;
             width: 100%;
@@ -143,7 +154,7 @@ header {
                 flex-direction: column;
                 margin-top: 22px;
                 padding: 20px 10px;
-                width: 300px;
+                width: 80%;
                
             }
             .service-title {

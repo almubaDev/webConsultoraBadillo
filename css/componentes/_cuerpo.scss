@@ -17,7 +17,7 @@
             width: 100%;
         }
         @include mqry($mobile) {
-            margin-left: 0;
+            margin-left: 4px;
             
         }
         h2 {

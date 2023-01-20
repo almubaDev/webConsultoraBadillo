@@ -77,24 +77,32 @@ header .burgerMenu {
   }
 }
 header .mobile__nav {
-  background-color: rgba(166, 176, 203, 0.9);
-  border-radius: 0 12px 12px 12px;
+  background-color: #21366e;
+  border-radius: 0 0px 24px 0;
+  box-shadow: 2px 2px 4px #A6B0CB;
   display: block;
   padding: 8px;
   width: 90%;
   position: absolute;
   left: 16px;
   top: 45px;
+  z-index: 50;
 }
 header .mobile__nav ul {
   flex-direction: column;
 }
 header .mobile__nav li {
+  border-bottom: 2px solid #A6B0CB;
   list-style: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 62px;
 }
 header .mobile__nav li:hover {
   background-color: #FFEECC;
+}
+header .mobile__nav .endList {
+  border: none;
 }
 header .mobile__nav a {
   display: block;
@@ -105,6 +113,7 @@ header .mobile__nav a {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5rem;
+  color: #FFEECC;
   font-size: 1rem;
   text-align: center;
   width: 100%;
@@ -239,7 +248,7 @@ header .header-info .header-right {
     flex-direction: column;
     margin-top: 22px;
     padding: 20px 10px;
-    width: 300px;
+    width: 80%;
   }
 }
 @media screen and (max-width: 995px) {
@@ -312,7 +321,7 @@ header .header-info .header-right a:hover {
 }
 @media screen and (max-width: 995px) {
   .us .us__information {
-    margin-left: 0;
+    margin-left: 4px;
   }
 }
 .us .us__information h2 {
