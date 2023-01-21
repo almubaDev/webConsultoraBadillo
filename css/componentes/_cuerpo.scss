@@ -23,6 +23,10 @@
         h2 {
             margin-bottom: 42px;
             @include text-definition($font-title);
+            font-size: 3rem;
+            @include mqry($mobile) {
+                font-size: 1.2rem;
+            }
             @include mqry($laptop) {
                 margin-bottom: 22px;
             }
@@ -30,12 +34,17 @@
         ul {
             padding: 12px 15px;
             @include text-definition($font-text);
-            font-size: 0.8rem;
+            font-size: 1.4rem;
+            line-height: 2.5rem;
             // @include mqry($mobile) {
             //     list-style: none;
             // }
+            @include mqry($mobile) {
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+            }
             li {
-                margin-bottom: 8px;
+                margin-bottom: 16px;
             }
             .cab {
                 display: none;

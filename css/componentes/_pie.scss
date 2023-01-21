@@ -54,6 +54,7 @@ footer{
        }
        @include mqry($mobile) {
         align-self: flex-start;
+        list-style: none;
         list-style-position: inside;
         margin-left: 38px;
        }

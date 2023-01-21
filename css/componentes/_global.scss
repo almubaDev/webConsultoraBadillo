@@ -86,7 +86,10 @@ $desktop: 1605px;
     45%{transform: translate(0, -5px);}
     55%{transform: translate(0, 5px);}
 }
-
+@keyframes traslate {
+    50% {transform: translateX(40%)};
+    100% {transform: translateX(90%)};
+}
 // @mixin background-blur($url, $pxBlur) {
 //     &:before {
 //         content: "";
